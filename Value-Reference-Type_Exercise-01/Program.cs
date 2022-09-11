@@ -23,22 +23,35 @@ namespace Value_and_Reference_Types_Exercise_01
 
             // TODO: Write out each of these to the Conosle like so:
             // Console.WriteLine($"Before: {yourVariable}");
+            Console.WriteLine($"Before: {myDouble}");
+            Console.WriteLine($"Before: {myInteger}");
+            Console.WriteLine($"Before: {myString}");
 
             // TODO: Use the ChangeValueType() function to "change the value type" for each variable
             // ChangeValueType(yourVariable);
+            ChangeValueType(myDouble);
+            ChangeValueType(myInteger);
+            ChangeValueType(myString);
+
 
             AddSmallBreak();
 
             // Thought Experiment: What will the value of the original variable be after going through the ChangeValueType() method?
-            // TODO: Double variable value = ?
-            // TODO: Integer variable value = ?
-            // TODO: String variable value = ?
+            // TODO: Double variable value = 1.125
+            // TODO: Integer variable value = 100
+            // TODO: String variable value = A new value
+
 
             // Why:
-            // Answer: ?
+            // Answer: Answer did not change since it was copied and was not printed after going through the method
 
             // TODO: Write out the variable to the console after being passed through the ChangeValueType() function
             // Console.WriteLine($"Adjusted: {yourVariable}");
+
+            Console.WriteLine($"After: {myDouble}");
+            Console.WriteLine($"After: {myInteger}");
+            Console.WriteLine($"After: {myString}");
+
 
             #endregion
 
@@ -52,22 +65,74 @@ namespace Value_and_Reference_Types_Exercise_01
             int[] myArray = new int[] { 4, 5, 6 };
             Dog myDogObject = new Dog { name = "Lassy" };
 
-            // TODO: Write out each of these to the Conosle. Remember to use a loop for the list and array!
+            // TODO: Write out each of these to the Console. Remember to use a loop for the list and array!
+            Console.WriteLine($"Before: {sb}");
 
+            AddSmallBreak();
+
+            Console.Write($"Before: ");
+
+            foreach (var num in myList)
+            {
+                Console.Write(num);
+            }
+
+            AddSmallBreak();
+
+            Console.Write("Before: ");
+
+            foreach (var num in myArray)
+            {
+                Console.Write(num);
+            }
+
+            AddSmallBreak();
+
+            Console.WriteLine($"Before : {myDogObject.name}");
+
+            AddSmallBreak();
 
             // TODO: Use the ChangeReferenceType() function to "change the reference" for each variable
+            ChangeReferenceType(sb);
+            ChangeReferenceType(myList);
+            ChangeReferenceType(myArray);
+            ChangeReferenceType(myDogObject);
 
             // Thought Experiment: What will the value of the original variable be after going through the ChangeReferenceType() method?
-            // TODO: StringBuilder variable value = ?
-            // TODO: List<int> variable values = ?
-            // TODO: int[] variable values = ?
-            // TODO: Dog object variable's name = ?
+            // TODO: StringBuilder variable value = The ending string's value
+            // TODO: List<int> variable values = 100200300
+            // TODO: int[] variable values = 400500600
+            // TODO: Dog object variable's name = A changed name
 
             // Why:
-            // Answer: ?
+            // Answer: The variables will be changed since it passed through the changereferencetype method after
 
 
-            // TODO: Write out the adjusted variables to the console after being passed through the ChangeReferenceType() function
+            Console.WriteLine($"After: {sb}");
+
+            AddSmallBreak();
+
+            Console.Write($"After: ");
+
+            foreach (var num in myList)
+            {
+                Console.Write(num);
+            }
+
+            AddSmallBreak();
+
+            Console.Write($"After: ");
+
+            foreach (var num in myArray)
+            {
+                Console.Write(num);
+            }
+
+            AddSmallBreak();
+
+            Console.WriteLine($"After: {myDogObject.name}");
+
+            AddSmallBreak();
 
 
             #endregion
