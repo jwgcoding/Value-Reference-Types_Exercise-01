@@ -28,7 +28,8 @@ namespace Value_and_Reference_Types_Exercise_01
             Console.WriteLine($"Before: {myString}");
 
             // TODO: Use the ChangeValueType() function to "change the value type" for each variable
-            // ChangeValueType(yourVariable);
+            // ChangeValueType(yourVariable)
+
             ChangeValueType(myDouble);
             ChangeValueType(myInteger);
             ChangeValueType(myString);
@@ -108,7 +109,7 @@ namespace Value_and_Reference_Types_Exercise_01
             // Answer: The variables will be changed since it passed through the changereferencetype method after
 
 
-            Console.WriteLine($"After: {sb}");
+            Console.Write($"After: {sb}");
 
             AddSmallBreak();
 
@@ -121,7 +122,7 @@ namespace Value_and_Reference_Types_Exercise_01
 
             AddSmallBreak();
 
-            Console.Write($"After: ");
+            Console.WriteLine($"After: ");
 
             foreach (var num in myArray)
             {
@@ -132,7 +133,9 @@ namespace Value_and_Reference_Types_Exercise_01
 
             Console.WriteLine($"After: {myDogObject.name}");
 
-            AddSmallBreak();
+          AddSmallBreak();
+
+           Console.Read();
 
 
             #endregion
